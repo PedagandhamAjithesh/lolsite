@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header, footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        main {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        img {
+            width: 250px;
+            height: 350px;
+            margin: 10px;
+            border: 2px solid #333;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Movie Website</h1>
+    </header>
+
+    <main>
+        <a href="/cola.html"><img src="cola.jpg" alt=""></a>
+        <a href="/devil.html"><img src="devil.jpg" alt=""></a>
+        <a href="/hi.html"><img src="hi.jpg" alt=""></a>
+    </main>
+
+    <footer>
+        <p>&copy;2024 Movie Website 💟</p>
+    </footer>
+
+    <script>
+        // Add your video play functionality here
+        document.getElementById('toggleButton').addEventListener('click', function() {
+            // Add your code to toggle video play here
+            alert('Toggle Play button clicked!');
+        });
+    </script>
+
+</body>
+</html>

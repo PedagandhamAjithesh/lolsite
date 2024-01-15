@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player Website</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header, footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        main {
+            text-align: center;
+            margin: 20px;
+        }
+
+        video {
+            width: 80%;
+            max-width: 800px;
+            display: block;
+            margin: 0 auto;
+            background-color: #000;
+        }
+
+        #seek-bar-container {
+            margin-top: 10px;
+            width: 80%;
+            max-width: 800px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        #seek-bar {
+            width: 100%;
+            height: 10px;
+            background-color: #ddd;
+            position: relative;
+        }
+
+        #seek-bar .seek-progress {
+            height: 100%;
+            background-color: #4CAF50;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to Video Player Website</h1>
+</header>
+
+<main>
+    <video id="video-player" width="640" height="360" controls>
+        <!-- Replace 'your-video.mp4' with the actual path to your video file -->
+        <source src="https://storage.googleapis.com/bucket678/www.5MovieRulz.top%20-%20Keedaa%20Cola%20(2023)%20Telugu%20TRUE%20WEB-DL%20-%204K%20SDR%20-%20HEVC%20-%20(DD%2B5.1%20-%20384Kbps%20%26%20AAC)%20-%202.6GB%C2%A0-%20ESub.mkv" type="video/mp4">
+        <!-- Add additional source elements for other video formats if needed -->
+        Your browser does not support the video tag.
+    </video>
+
+    <div id="seek-bar-container">
+        <div id="seek-bar">
+            <div class="seek-progress"></div>
+        </div>
+    </div>
+    <div id="seek-bar-container">
+        <div id="seek-bar">
+            <div class="seek-progress"></div>
+        </div>
+    </div>
+
+    <div id="seek-bar-container">
+        <div id="seek-bar">
+            <div class="seek-progress"></div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2024 Video Player Website</p>
+</footer>
+
+<script>
+    var video = document.getElementById("video-player");
+    var seekBar = document.getElementById("seek-bar");
+    var seekBarProgress = document.querySelector(".seek-progress");
+
+    video.addEventListener("timeupdate", function() {
+        var value = (video.currentTime / video.duration) * 100;
+        seekBarProgress.style.width = value + "%";
+    });
+
+    seekBar.addEventListener("click", function(e) {
+        var percent = e.offsetX / this.offsetWidth;
+        video.currentTime = percent * video.duration;
+    });
+</script>
+
+</body>
+</html>
